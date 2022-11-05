@@ -4,168 +4,161 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- css -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <!-- css -->
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
 <body>
-    <div class="customContainer">
-            <div class="pt-5">
-                <div class="m-2">
-                    <h2 class="text-center">Microverse Survey Form</h2>
-                    <p class="text-center">Thank you for taking the time to help us improve the platform</p>
+    <section class="text-gray-600 body-font relative bg-cyan-100">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Microverse Survey form</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Thank you for taking the time to help us improve the platform</p>
+          </div>
+          <div class="lg:w-1/2 md:w-2/3 mx-auto p-4 text-white" style="background-color: rgba(27, 27, 50, 0.8);">
+            <div class="flex flex-wrap -m-2">
+                <div class="p-2 w-full">
+                    <div class="relative">
+                      <label for="email" class="leading-7 text-sm">Name</label>
+                      <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full bg-opacity-50 rounded border border-gray-300 text-base outline-none py-1 px-3 leading-8 ">
+                    </div>
                 </div>
+                <div class="p-2 w-full">
+                    <div class="relative">
+                      <label for="email" class="leading-7 text-sm">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email" class="w-full  bg-opacity-50 rounded border border-gray-300 text-base outline-none py-1 px-3 leading-8">
+                    </div>
+                </div>
+                <div class="p-2 w-full">
+                    <div class="relative">
+                      <label for="email" class="leading-7 text-sm">Age(Optional)</label>
+                      <input type="text" id="name" name="name" placeholder="Age" class="w-full rounded border border-gray-300 text-base outline-none  py-1 px-3 leading-8">
+                    </div>
+                </div>
+
+                <div class="p-2 w-full">
+                    <div class="relative">
+                        <label for="">Which option best describes your current role?</label>
+                        <select class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 text-base outline-none py-1 px-3 leading-8" name="prefer">
+                            <option selected>Select current role ? </option>
+                            <option value="student">student</option>
+                            <option value="fullTimeJob">Full time job</option>
+                            <option value="fullTimeLearner">Full time learner</option>
+                            <option value="prefrenot">prefer not to say</option>
+                            <option value="others">others</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="p-2 w-full">
+                    
+                    <fieldset class="mb-5">
+                        <legend class="mb-2">
+                            Would you recommend microverse to a friend?
+                        </legend>
                 
-                <div>
-                    <form action="#">
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
+                        <div class="flex items-center mb-4">
+                            <input id="recommend-1" type="radio" name="recommend" value="" class="h-4 w-4 border-gray-300" >
+                            <label for="recommend-1" class="font-medium  ml-2 block">
+                                Definitly
+                            </label>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput2" class="form-label">Email</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Email">
+                
+                        <div class="flex items-center mb-4">
+                            <input id="recommend-2" type="radio" name="recommend" value="" class="h-4 w-4 border-gray-300 ">
+                            <label for="recommend-2" class="font-medium  ml-2 block">
+                                Maybe
+                            </label>
                         </div>
-
-                        <div class="mb-3">
-                            <label for="formGroupExampleInput" class="form-label">Age(Optional)</label>
-                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Age">
+                
+                        <div class="flex items-center mb-4">
+                            <input id="recommend-3" type="radio" name="recommend" value="" class="h-4 w-4 border-gray-300">
+                            <label for="recommend-3" class="font-medium ml-2 block">
+                                Not Sure
+                            </label>
                         </div>
-
-                        <div class="mb-3">
-                            <label class="" >Which option best describes your current role?</label>
-                            <select class="form-select" id="autoSizingSelect">
-                                <option selected>Select current role</option>
-                                <option value="student">Student</option>
-                                <option value="job">Full Time Job</option>
-                                <option value="learner">Full Time Learner</option>
-                                <option value="preferNo">Prefer not to say</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-
-                        <fieldset>
-                            <legend>Would you recommend freeCodeCamp to a friend?</legend>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
-                                <label class="form-check-label" for="gridRadios1">
-                                    First radio
-                                </label>
-                                </div>
-                                <div class="form-check">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
-                                <label class="form-check-label" for="gridRadios2">
-                                    Second radio
-                                </label>
-                                </div>
-                                <div class="form-check disabled">
-                                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3" disabled>
-                                <label class="form-check-label" for="gridRadios3">
-                                    Third disabled radio
-                                </label>
-                                </div>
-                            </div>
-                        </fieldset>
-
-                        <div class="mb-3">
-                            <label class="" >What is your favorite feature of Microverse?</label>
-                            <select class="form-select" id="autoSizingSelect">
-                                <option selected>Select an option</option>
-                                <option value="challenges">Challenges</option>
-                                <option value="projects">Projects</option>
-                                <option value="community">Community</option>
-                                <option value="openSource">Open source</option>
-                            </select>
-                        </div>
-                        <div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="FrontendProjects">
-                                <label class="form-check-label" for="FrontendProjects">
-                                    Front-end Projects
-                                </label>
-                            </div>
-                            
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="BackendProjects">
-                                <label class="form-check-label" for="BackendProjects">
-                                    Back-end Projects
-                                </label>
-                              </div>
-                            
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                    Data Visualization
-                                </label>
-                              </div>
-                            
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                  Challenges
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                    Open Source Community
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                    Gitter help rooms
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                  videos
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                    City Meetups
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                  Wiki
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                  Forum
-                                </label>
-                              </div>
-                              <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck1">
-                                <label class="form-check-label" for="gridCheck1">
-                                    Additional Courses
-                                </label>
-                              </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
+                    </fieldset>
                 </div>
 
+                <div class="p-2 w-full">
+                    <div class="relative">
+                        <label for="">What is your favorite feature of freeCodeCamp?</label>
+                        <select class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 text-base outline-none py-1 px-3 leading-8" name="">
+                            <option selected>Select an Option </option>
+                            <option value="challengs">Challenges</option>
+                            <option value="projects">Projects</option>
+                            <option value="community">Community</option>
+                            <option value="opensource">Open source</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="p-2 w-full">
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span class="ml-2 ">Font-end Projects</span>
+                    </label>
+        
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span class="ml-2">Back-end Projects</span>
+                    </label>
+        
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 ">
+                        <span class="ml-2">Data visualization</span>
+                    </label>
+        
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span class="ml-2">Challenges</span>
+                    </label>
+        
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span class="ml-2">Open Source Community</span>
+                    </label>
+        
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span class="ml-2">Gitter help rooms</span>
+                    </label>
+        
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span class="ml-2 ">videos</span>
+                    </label>
+        
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span class="ml-2">City Meetups</span>
+                    </label>
+        
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span class="ml-2">Wiki</span>
+                    </label>
+
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span class="ml-2">Forum</span>
+                    </label>
+        
+                    <label class="block items-center mt-3">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span class="ml-2">Additional Courses</span>
+                    </label>
+                </div>
+              <div class="p-2 w-full">
+                <div class="relative">
+                  <label for="message" class="leading-7 ">Any comments or suggestions?</label>
+                  <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 text-gray-600  h-32 text-base outline-none py-1 resize-none leading-6 px-3">Enter your comment here...</textarea>
+                </div>
+              </div>
+              <div class="p-2 w-full">
+                <button class="w-full bg-green-500 text-white border-0 py-2 px-8 rounded text-lg">Submit</button>
+              </div>
+            </div>
+          </div>
         </div>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  </body>
-</html>
+      </section>
 </body>
 </html>
